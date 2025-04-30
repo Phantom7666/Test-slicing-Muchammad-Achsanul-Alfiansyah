@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.layout {
+  background-color: #333;
+  width: 90vw;
+  max-width: 800px;
+  height: 90vh;
+  position: relative;
+  padding: 20px;
+}
+
+/* Blocks */
+.blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.blocks .center {
+  margin: 0 auto;
+}
+
+/* Block style */
+.block {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+}
+
+/* Ground (bagian bawah) */
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: green;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Circle & Button */
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.button {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button .inner {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.square.red {
+  display: none; /* hanya muncul di mobile */
+}
+
+@media (max-width: 600px) {
+  .layout {
+    width: 95vw;
+    height: 95vh;
+  }
+
+  .blocks {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .block {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ground {
+    height: 60px;
+    padding: 5px;
+  }
+
+  .square.red {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+  }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button .inner {
+    width: 20px;
+    height: 20px;
+  }
+}
